@@ -350,8 +350,8 @@ const Page = () => {
                     {item.price}
                   </div>
 
-                  <button
-                    type="button"
+                  <Link
+                    href="/seller-details"
                     style={{
                       width: '100%',
                       height: '48px',
@@ -367,11 +367,12 @@ const Page = () => {
                       justifyContent: 'center',
                       gap: '8px',
                       cursor: 'pointer',
+                      textDecoration: 'none',
                     }}
                   >
                     <MdOutlineMessage size={18} />
                     <span>Chat With Seller</span>
-                  </button>
+                  </Link>
                 </div>
               </article>
             ))}

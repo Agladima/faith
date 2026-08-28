@@ -1,6 +1,6 @@
-import SellerDetails from "../containers/SellerDetails/page";
+import Favorite from "../containers/Favorite/page";
 export default function Home() {
   return (
-    <SellerDetails/>
+    <Favorite/>
   );
 }
