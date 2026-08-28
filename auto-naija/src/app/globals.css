@@ -26,6 +26,196 @@ body {
 }
 
 @media (max-width: 640px) {
+  .favoritesHeader,
+  .sellerDetailsHeader {
+    padding: 0 16px !important;
+    gap: 12px !important;
+  }
+
+  .favoritesHeader {
+    flex-wrap: wrap !important;
+    height: auto !important;
+    min-height: 64px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .favoritesNav,
+  .sellerDetailsNav {
+    gap: 12px !important;
+    font-size: 11px !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-end !important;
+  }
+
+  .favoritesMain,
+  .sellerDetailsMain {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .favoritesContainer,
+  .sellerDetailsBreadcrumb,
+  .sellerDetailsHeroWrap,
+  .sellerDetailsTabBar,
+  .sellerDetailsAboutPerf,
+  .sellerDetailsSpecialtiesSection {
+    max-width: 100% !important;
+  }
+
+  .favoritesHeadingRow {
+    align-items: center !important;
+    margin-bottom: 16px !important;
+  }
+
+  .favoritesHeadingRow > div:first-child {
+    font-size: 24px !important;
+  }
+
+  .favoritesGrid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .favoritesCard {
+    width: 100% !important;
+    max-width: 448px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  .favoritesImageWrap {
+    height: 180px !important;
+  }
+
+  .favoritesCardBody {
+    padding: 14px !important;
+  }
+
+  .favoritesFitBox {
+    min-height: auto !important;
+  }
+
+  .favoritesSellerButton {
+    width: 100% !important;
+    height: 46px !important;
+    font-size: 14px !important;
+  }
+
+  .sellerDetailsBreadcrumb {
+    font-size: 11px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .sellerDetailsHeroWrap {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-top: 16px !important;
+  }
+
+  .sellerDetailsHeroImage {
+    height: 160px !important;
+  }
+
+  .sellerDetailsHeroBottom {
+    height: auto !important;
+    min-height: 120px !important;
+  }
+
+  .sellerDetailsAvatar,
+  .sellerDetailsNameRow,
+  .sellerDetailsMetaRow,
+  .sellerDetailsActions {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    z-index: 1 !important;
+  }
+
+  .sellerDetailsAvatar {
+    width: 96px !important;
+    height: 96px !important;
+    margin: -48px 0 12px 16px !important;
+    font-size: 26px !important;
+  }
+
+  .sellerDetailsNameRow {
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    margin: 0 16px 8px !important;
+  }
+
+  .sellerDetailsNameRow > div:first-child {
+    font-size: 20px !important;
+  }
+
+  .sellerDetailsNameRow > div:last-child {
+    width: auto !important;
+    height: auto !important;
+    padding: 4px 8px !important;
+  }
+
+  .sellerDetailsMetaRow {
+    margin: 0 16px 12px !important;
+    gap: 8px 10px !important;
+    line-height: 1.4 !important;
+  }
+
+  .sellerDetailsActions {
+    margin: 0 16px 16px !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .sellerDetailsActions button {
+    width: calc(50% - 5px) !important;
+    min-width: 140px !important;
+  }
+
+  .sellerDetailsTabBar {
+    overflow-x: auto !important;
+    gap: 20px !important;
+    padding-bottom: 0 !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .sellerDetailsTabBar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sellerDetailsAboutPerf {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .sellerDetailsAboutCard,
+  .sellerDetailsPerformanceCard,
+  .sellerDetailsSpecialtiesCard,
+  .sellerDetailsPolicyCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+  }
+
+  .sellerDetailsAboutCard,
+  .sellerDetailsPerformanceCard,
+  .sellerDetailsSpecialtiesCard,
+  .sellerDetailsPolicyCard {
+    padding: 18px !important;
+  }
+
+  .sellerDetailsPerformanceCard {
+    padding-top: 18px !important;
+  }
+
+  .sellerDetailsSpecialtiesCard > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+
   .card404 {
     min-height: auto !important;
     padding: 24px 16px !important;

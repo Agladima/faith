@@ -52,12 +52,14 @@ const items = [
 const Page = () => {
   return (
     <div
+      className="favoritesPage"
       style={{
         minHeight: '100vh',
         backgroundColor: '#F5FAFF',
       }}
     >
       <header
+        className="favoritesHeader"
         style={{
           position: 'fixed',
           top: 0,
@@ -95,6 +97,7 @@ const Page = () => {
         </div>
 
         <nav
+          className="favoritesNav"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -115,6 +118,7 @@ const Page = () => {
       </header>
 
       <main
+        className="favoritesMain"
         style={{
           paddingTop: '64px',
           minHeight: '100vh',
@@ -125,6 +129,7 @@ const Page = () => {
         }}
       >
         <div
+          className="favoritesContainer"
           style={{
             maxWidth: '1176px',
             margin: '0 auto',
@@ -132,6 +137,7 @@ const Page = () => {
           }}
         >
           <div
+            className="favoritesHeadingRow"
             style={{
               display: 'flex',
               alignItems: 'flex-end',
@@ -163,6 +169,7 @@ const Page = () => {
           </div>
 
           <div
+            className="favoritesGrid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
@@ -171,6 +178,7 @@ const Page = () => {
           >
             {items.map((item) => (
               <article
+                className="favoritesCard"
                 key={item.title}
                 style={{
                   width: '274px',
@@ -186,6 +194,7 @@ const Page = () => {
                 }}
               >
                 <div
+                  className="favoritesImageWrap"
                   style={{
                     width: '100%',
                     height: '192px',
@@ -196,6 +205,7 @@ const Page = () => {
                   }}
                 >
                   <div
+                    className="favoritesCardBody"
                     style={{
                       position: 'absolute',
                       top: '50%',
@@ -213,6 +223,7 @@ const Page = () => {
                     />
                   </div>
                   <div
+                    className="favoritesFitBox"
                     style={{
                       position: 'absolute',
                       top: '8px',
@@ -351,6 +362,7 @@ const Page = () => {
                   </div>
 
                   <Link
+                    className="favoritesSellerButton"
                     href="/seller-details"
                     style={{
                       width: '100%',

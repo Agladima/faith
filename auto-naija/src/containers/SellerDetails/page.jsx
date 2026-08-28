@@ -20,12 +20,14 @@ import sellerBg from '../../assets/images/seller bg.png'
 const Page = () => {
   return (
     <div
+      className="sellerDetailsPage"
       style={{
         minHeight: '100vh',
         backgroundColor: '#F5FAFF',
       }}
     >
       <header
+        className="sellerDetailsHeader"
         style={{
           position: 'fixed',
           top: 0,
@@ -63,6 +65,7 @@ const Page = () => {
         </div>
 
         <nav
+          className="sellerDetailsNav"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -83,6 +86,7 @@ const Page = () => {
       </header>
 
       <main
+        className="sellerDetailsMain"
         style={{
           minHeight: '100vh',
           paddingLeft: '24px',
@@ -92,6 +96,7 @@ const Page = () => {
         }}
       >
         <div
+          className="sellerDetailsBreadcrumb"
           style={{
             display: 'flex',
             justifyContent: 'flex-start',
@@ -113,6 +118,7 @@ const Page = () => {
         </div>
 
         <div
+          className="sellerDetailsHeroWrap"
           style={{
             maxWidth: '1168px',
             margin: '20px auto 0',
@@ -120,6 +126,7 @@ const Page = () => {
           }}
         >
           <div
+            className="sellerDetailsHeroImage"
             style={{
               width: '100%',
               height: '192px',
@@ -138,6 +145,7 @@ const Page = () => {
           </div>
 
           <div
+            className="sellerDetailsHeroBottom"
             style={{
               width: '100%',
               height: '104px',
@@ -151,6 +159,7 @@ const Page = () => {
           />
 
           <div
+            className="sellerDetailsAvatar"
             style={{
               position: 'absolute',
               left: '32px',
@@ -175,6 +184,7 @@ const Page = () => {
           </div>
 
           <div
+            className="sellerDetailsNameRow"
             style={{
               position: 'absolute',
               left: '184px',
@@ -226,6 +236,7 @@ const Page = () => {
           </div>
 
           <div
+            className="sellerDetailsMetaRow"
             style={{
               position: 'absolute',
               left: '184px',
@@ -256,6 +267,7 @@ const Page = () => {
           </div>
 
           <div
+            className="sellerDetailsActions"
             style={{
               position: 'absolute',
               right: '24px',
@@ -313,6 +325,7 @@ const Page = () => {
         </div>
 
         <div
+          className="sellerDetailsTabBar"
           style={{
             maxWidth: '1168px',
             margin: '24px auto 0',
@@ -348,6 +361,7 @@ const Page = () => {
         </div>
 
         <div
+          className="sellerDetailsAboutPerf"
           style={{
             maxWidth: '1168px',
             margin: '24px auto 0',
@@ -358,6 +372,7 @@ const Page = () => {
           }}
         >
           <div
+            className="sellerDetailsAboutCard"
             style={{
               width: '770px',
               maxWidth: '100%',
@@ -401,6 +416,7 @@ available to help you find the exact fit for your vehicle.`}
           </div>
 
           <div
+            className="sellerDetailsPerformanceCard"
             style={{
               width: '373px',
               maxWidth: '100%',
@@ -579,6 +595,7 @@ available to help you find the exact fit for your vehicle.`}
         </div>
 
         <div
+          className="sellerDetailsSpecialtiesSection"
           style={{
             maxWidth: '1168px',
             margin: '24px auto 0',
@@ -589,6 +606,7 @@ available to help you find the exact fit for your vehicle.`}
           }}
         >
           <div
+            className="sellerDetailsSpecialtiesCard"
             style={{
               width: '770px',
               maxWidth: '100%',
@@ -702,6 +720,7 @@ available to help you find the exact fit for your vehicle.`}
           </div>
 
           <div
+            className="sellerDetailsPolicyCard"
             style={{
               width: '373px',
               maxWidth: '100%',
