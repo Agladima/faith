@@ -25,6 +25,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.favoritesMobileBack,
+.favoritesMobileTitle,
+.favoritesMobileShare {
+  display: none;
+}
+
+.sellerDetailsMobileBack,
+.sellerDetailsMobileTitle,
+.sellerDetailsMobileActions,
+.sellerDetailsMobileLocation,
+.sellerDetailsMobileChatButton {
+  display: none;
+}
+
+.mobileBottomNav {
+  display: none;
+}
+
 @media (max-width: 640px) {
   .favoritesHeader,
   .sellerDetailsHeader {
@@ -33,11 +51,89 @@ body {
   }
 
   .favoritesHeader {
-    flex-wrap: wrap !important;
-    height: auto !important;
-    min-height: 64px !important;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    flex-wrap: nowrap !important;
+    height: 72px !important;
+    min-height: 72px !important;
+    background-color: #1A3C6E !important;
+    border-bottom-color: #C8C4D9 !important;
+    justify-content: center !important;
+    position: fixed !important;
+  }
+
+  .favoritesDesktopBrand,
+  .favoritesNav {
+    display: none !important;
+  }
+
+  .favoritesMobileBack,
+  .favoritesMobileShare {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .favoritesMobileBack {
+    left: 16px;
+  }
+
+  .favoritesMobileShare {
+    right: 16px;
+  }
+
+  .favoritesMobileTitle {
+    display: block;
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .mobileBottomNav {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    display: flex !important;
+    height: 80px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    background-color: #FCF8FF;
+    border: 1px solid #C8C4D9;
+    overflow: hidden;
+  }
+
+  .mobileBottomNavItem {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 8px;
+    color: #474556;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .mobileBottomNavItem.is-active {
+    padding: 4px 8px;
+    background-color: #1A3C6E;
+    color: #FFFFFF;
   }
 
   .favoritesNav,
@@ -55,6 +151,11 @@ body {
     padding-bottom: 24px !important;
   }
 
+  .favoritesMain {
+    padding-top: 72px !important;
+    padding-bottom: 104px !important;
+  }
+
   .favoritesContainer,
   .sellerDetailsBreadcrumb,
   .sellerDetailsHeroWrap,
@@ -70,7 +171,7 @@ body {
   }
 
   .favoritesHeadingRow > div:first-child {
-    font-size: 24px !important;
+    display: none !important;
   }
 
   .favoritesGrid {
@@ -83,14 +184,84 @@ body {
     max-width: 448px !important;
     height: auto !important;
     margin: 0 auto !important;
+    height: 138px !important;
+    min-height: 138px !important;
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: 96px minmax(0, 1fr) !important;
+    align-items: stretch !important;
   }
 
   .favoritesImageWrap {
-    height: 180px !important;
+    width: 96px !important;
+    height: 96px !important;
+    min-height: 96px !important;
+    align-self: center;
+    background-color: #FFFFFF !important;
   }
 
   .favoritesCardBody {
-    padding: 14px !important;
+    width: 96px !important;
+    height: 96px !important;
+    padding: 0 !important;
+  }
+
+  .favoritesDetails {
+    min-width: 0;
+    overflow: hidden;
+    padding: 8px 10px 8px 10px !important;
+    justify-content: center !important;
+  }
+
+  .favoritesItemTitle {
+    font-size: 13px !important;
+    line-height: 1.15 !important;
+  }
+
+  .favoritesItemSubtitle {
+    margin-top: 3px !important;
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+  }
+
+  .favoritesSeller {
+    margin-top: 4px !important;
+    gap: 4px !important;
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+  }
+
+  .favoritesSeller svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
+  .favoritesFitDetails {
+    min-height: auto !important;
+    margin-top: 4px !important;
+    padding: 0 !important;
+    border: none !important;
+    background-color: transparent !important;
+    justify-content: flex-start !important;
+    gap: 1px !important;
+    font-size: 10px !important;
+    line-height: 1.15 !important;
+  }
+
+  .favoritesFitDetails > div {
+    font-size: 10px !important;
+    line-height: 1.15 !important;
+  }
+
+  .favoritesPrice {
+    margin-top: 4px !important;
+    font-size: 14px !important;
+  }
+
+  .favoritesHeart {
+    top: 10px !important;
+    right: 10px !important;
   }
 
   .favoritesFitBox {
@@ -98,87 +269,103 @@ body {
   }
 
   .favoritesSellerButton {
-    width: 100% !important;
-    height: 46px !important;
-    font-size: 14px !important;
+    display: none !important;
   }
 
   .sellerDetailsBreadcrumb {
-    font-size: 11px !important;
-    margin-bottom: 12px !important;
+    display: none !important;
+  }
+
+  .sellerDetailsHeader {
+    height: 72px !important;
+    min-height: 72px !important;
+    background-color: #1A3C6E !important;
+    border-bottom-color: #C8C4D9 !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+    position: fixed !important;
+  }
+
+  .sellerDetailsDesktopBrand,
+  .sellerDetailsNav {
+    display: none !important;
+  }
+
+  .sellerDetailsMobileBack {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .sellerDetailsMobileTitle {
+    display: block;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .sellerDetailsMobileActions {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transform: translateY(-50%);
+  }
+
+  .sellerDetailsMobileActions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .sellerDetailsMain {
+    padding: 72px 0 104px !important;
   }
 
   .sellerDetailsHeroWrap {
-    display: flex !important;
-    flex-direction: column !important;
-    margin-top: 16px !important;
+    width: 100% !important;
+    margin-top: 0 !important;
   }
 
   .sellerDetailsHeroImage {
-    height: 160px !important;
+    height: 292px !important;
+    border-radius: 0 !important;
   }
 
   .sellerDetailsHeroBottom {
-    height: auto !important;
-    min-height: 120px !important;
+    display: none !important;
   }
 
   .sellerDetailsAvatar,
   .sellerDetailsNameRow,
   .sellerDetailsMetaRow,
   .sellerDetailsActions {
-    position: static !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    z-index: 1 !important;
-  }
-
-  .sellerDetailsAvatar {
-    width: 96px !important;
-    height: 96px !important;
-    margin: -48px 0 12px 16px !important;
-    font-size: 26px !important;
-  }
-
-  .sellerDetailsNameRow {
-    flex-wrap: wrap !important;
-    align-items: flex-start !important;
-    gap: 8px !important;
-    margin: 0 16px 8px !important;
-  }
-
-  .sellerDetailsNameRow > div:first-child {
-    font-size: 20px !important;
-  }
-
-  .sellerDetailsNameRow > div:last-child {
-    width: auto !important;
-    height: auto !important;
-    padding: 4px 8px !important;
-  }
-
-  .sellerDetailsMetaRow {
-    margin: 0 16px 12px !important;
-    gap: 8px 10px !important;
-    line-height: 1.4 !important;
-  }
-
-  .sellerDetailsActions {
-    margin: 0 16px 16px !important;
-    gap: 10px !important;
-    flex-wrap: wrap !important;
-  }
-
-  .sellerDetailsActions button {
-    width: calc(50% - 5px) !important;
-    min-width: 140px !important;
+    display: none !important;
   }
 
   .sellerDetailsTabBar {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 16px !important;
+    gap: 24px !important;
     overflow-x: auto !important;
-    gap: 20px !important;
-    padding-bottom: 0 !important;
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
@@ -188,32 +375,69 @@ body {
   }
 
   .sellerDetailsAboutPerf {
-    flex-direction: column !important;
-    gap: 16px !important;
-  }
-
-  .sellerDetailsAboutCard,
-  .sellerDetailsPerformanceCard,
-  .sellerDetailsSpecialtiesCard,
-  .sellerDetailsPolicyCard {
     width: 100% !important;
-    max-width: 100% !important;
-    min-height: auto !important;
+    margin-top: 16px !important;
+    padding: 0 16px !important;
+    display: block !important;
   }
 
-  .sellerDetailsAboutCard,
-  .sellerDetailsPerformanceCard,
-  .sellerDetailsSpecialtiesCard,
-  .sellerDetailsPolicyCard {
-    padding: 18px !important;
+  .sellerDetailsAboutCard {
+    width: 100% !important;
+    min-height: auto !important;
+    padding: 16px !important;
+  }
+
+  .sellerDetailsAboutCard > div:first-child {
+    font-size: 20px !important;
+  }
+
+  .sellerDetailsMobileLocation {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: -4px 0 14px;
+    color: #61646B;
+    font-size: 12px;
+    font-weight: 400;
   }
 
   .sellerDetailsPerformanceCard {
-    padding-top: 18px !important;
+    display: none !important;
   }
 
-  .sellerDetailsSpecialtiesCard > div:last-child {
-    grid-template-columns: 1fr !important;
+  .sellerDetailsSpecialtiesSection {
+    width: 100% !important;
+    margin-top: 16px !important;
+    padding: 0 16px !important;
+    display: block !important;
+  }
+
+  .sellerDetailsSpecialtiesCard {
+    display: none !important;
+  }
+
+  .sellerDetailsPolicyCard {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 154px !important;
+    padding: 16px !important;
+    gap: 16px !important;
+  }
+
+  .sellerDetailsMobileChatButton {
+    display: flex;
+    width: 100%;
+    height: 44px;
+    margin-top: 12px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1A3C6E;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
   }
 
   .card404 {

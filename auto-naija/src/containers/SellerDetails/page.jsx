@@ -1,7 +1,12 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { IoCarOutline } from 'react-icons/io5'
+import { IoMdArrowBack, IoMdSearch, IoMdShare } from 'react-icons/io'
+import { FaHeart } from 'react-icons/fa'
 import { IoIosArrowForward } from 'react-icons/io'
 import { VscVerifiedFilled } from 'react-icons/vsc'
 import { CiLocationOn } from 'react-icons/ci'
@@ -15,9 +20,13 @@ import { MdEngineering } from 'react-icons/md'
 import { HiOutlineBolt } from 'react-icons/hi2'
 import { RiShieldKeyholeLine } from 'react-icons/ri'
 import { FaArrowRight } from 'react-icons/fa6'
+import { MdHomeFilled, MdOutlineShoppingCart } from 'react-icons/md'
+import { CgProfile } from 'react-icons/cg'
 import sellerBg from '../../assets/images/seller bg.png'
 
 const Page = () => {
+  const router = useRouter()
+
   return (
     <div
       className="sellerDetailsPage"
@@ -44,7 +53,25 @@ const Page = () => {
           zIndex: 50,
         }}
       >
+        <button
+          type="button"
+          className="sellerDetailsMobileBack"
+          onClick={() => router.back()}
+          aria-label="Go back"
+        >
+          <IoMdArrowBack size={20} />
+        </button>
+        <div className="sellerDetailsMobileTitle">Autoparts Lagos</div>
+        <div className="sellerDetailsMobileActions">
+          <button type="button" aria-label="Add seller to favourites">
+            <FaHeart size={18} />
+          </button>
+          <button type="button" aria-label="Share seller">
+            <IoMdShare size={20} />
+          </button>
+        </div>
         <div
+          className="sellerDetailsDesktopBrand"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -394,6 +421,11 @@ const Page = () => {
               }}
             >
               About This Seller
+            </div>
+
+            <div className="sellerDetailsMobileLocation">
+              <CiLocationOn size={16} />
+              <span>Ladipo Market, Lagos</span>
             </div>
 
             <div
@@ -787,9 +819,33 @@ available to help you find the exact fit for your vehicle.`}
               <span>Read full policy</span>
               <FaArrowRight size={14} />
             </div>
+
           </div>
+
+          <button
+            type="button"
+            className="sellerDetailsMobileChatButton"
+          >
+            <MdOutlineMessage size={18} />
+            <span>Chat with Autopart Lagos</span>
+          </button>
         </div>
       </main>
+
+      <nav className="mobileBottomNav sellerDetailsMobileBottomNav" aria-label="Mobile navigation">
+        {[
+          { label: 'Home', icon: MdHomeFilled, href: '/' },
+          { label: 'Search', icon: IoMdSearch, href: '/' },
+          { label: 'Chat', icon: MdOutlineMessage, href: '/' },
+          { label: 'Order', icon: MdOutlineShoppingCart, href: '/' },
+          { label: 'Profile', icon: CgProfile, href: '/password-security' },
+        ].map(({ label, icon: Icon, href }) => (
+          <Link key={label} href={href} className="mobileBottomNavItem">
+            <Icon size={16} />
+            <span>{label}</span>
+          </Link>
+        ))}
+      </nav>
     </div>
   )
 }
